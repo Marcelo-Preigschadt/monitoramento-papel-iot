@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitoramento de Papel Higiênico</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="left">
+        <span class="logo">🚽</span>
+        <div>
+            <h1>Monitoramento de Papel Higiênico</h1>
+            <small>Controle de abastecimento em tempo real</small>
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="metric">
+            <span id="total">0</span>
+            <p>Banheiros</p>
+        </div>
+
+        <div class="metric crit">
+            <span id="criticos">0</span>
+            <p>Críticos</p>
+        </div>
+
+        <div class="metric warn">
+            <span id="atencao">0</span>
+            <p>Atenção</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="container"></div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b1220;
+    color: #e5e7eb;
+}
+
+/* HEADER */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111827;
+    padding: 20px 30px;
+    border-bottom: 2px solid #1f2937;
+}
+
+.left {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+small {
+    opacity: 0.5;
+}
+
+/* METRICS */
+.right {
+    display: flex;
+    gap: 20px;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.metric p {
+    margin: 0;
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+/* MAIN GRID */
+main {
+    padding: 30px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: #1f2937;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 6px solid #22c55e;
+    transition: 0.3s;
+    position: relative;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* VALOR */
+.nivel {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* STATUS */
+.status {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* DISTANCIA */
+.distancia {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+/* BARRA */
+.barra {
+    height: 6px;
+    background: #374151;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progresso {
+    height: 100%;
+    transition: 0.4s;
+}
+
+/* CORES */
+.ok {
+    border-color: #22c55e;
+}
+.ok .progresso {
+    background: #22c55e;
+}
+
+.atencao {
+    border-color: #f59e0b;
+}
+.atencao .progresso {
+    background: #f59e0b;
+}
+
+.critico {
+    border-color: #ef4444;
+    animation: alerta 1s infinite;
+}
+.critico .progresso {
+    background: #ef4444;
+}
+
+.offline {
+    border-color: #6b7280;
+    opacity: 0.5;
+}
+
+/* ALERTA */
+@keyframes alerta {
+    0% { box-shadow: 0 0 5px red; }
+    50% { box-shadow: 0 0 20px red; }
+    100% { box-shadow: 0 0 5px red; }
+}
+.card h3::before {
+    content: "🚻 ";
+}
